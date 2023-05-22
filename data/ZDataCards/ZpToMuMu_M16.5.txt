@@ -1,0 +1,25 @@
+Combination of ZpToMuMu_M16.5_2017=/home/kshi/SUSY/CMSSW_8_0_25/src/Zprime-StatFW/DataCard_Zto4l/Run2017/2022-03-23_ULdata/Zprime/ZpToMuMu_M16.5/ZpToMuMu_M16.5_2017.txt
+imax 1 number of bins
+jmax 2 number of processes minus 1
+kmax 10 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes *                    ZpToMuMu_M16.5_2017  FAKE
+----------------------------------------------------------------------------------------------------------------------------------
+bin          ZpToMuMu_M16.5_2017
+observation  5                  
+----------------------------------------------------------------------------------------------------------------------------------
+bin                              ZpToMuMu_M16.5_2017  ZpToMuMu_M16.5_2017  ZpToMuMu_M16.5_2017
+process                          zpToMuMu_M16.5       ggZZ                 qqZZ               
+process                          0                    1                    2                  
+rate                             860.445775364        0.0432849189         4.195868171        
+----------------------------------------------------------------------------------------------------------------------------------
+CMS_eff_e               lnN      -                    1.04                 1.04               
+CMS_eff_m               lnN      -                    1.025                1.025              
+CMS_res_e               lnN      -                    1.02                 1.02               
+CMS_res_m               lnN      -                    1.02                 1.02               
+CMS_scale_e             lnN      -                    1.005                1.005              
+CMS_scale_m             lnN      -                    1.005                1.005              
+EwkCorr_qqZZ            lnN      -                    -                    1.001              
+PDFScale_qqZZ           lnN      -                    -                    1.034              
+QCDScale_qqZZ           lnN      -                    -                    1.042              
+lumi                    lnN      -                    1.025                1.025              

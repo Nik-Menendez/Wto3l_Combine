@@ -1,0 +1,27 @@
+# Simple counting experiment, with one signal and a few background processes 
+# One signal process, three background processes when using RBE 
+imax 1 number of channels
+jmax 4 number of backgrounds
+kmax 6 number of nuisance parameters
+------------
+shapes *              ZpToMuMu_M4.30_2017 FAKE
+------------
+# we have just one channel, in which we observe 65 events
+bin         ZpToMuMu_M4.30_2017
+observation 65
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second 'process' line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin             ZpToMuMu_M4.30_2017	ZpToMuMu_M4.30_2017	ZpToMuMu_M4.30_2017	ZpToMuMu_M4.30_2017	ZpToMuMu_M4.30_2017
+process         ZpToMuMu_M4.30			ZZ						WZ						DY						RBE
+process         0						1     					2     					3     					4
+rate       		8793.312982 			3.975810 				13.026290 				0.000000 				49.708111
+------------
+lumi    lnN    1.023 1.023 1.023 1.023  -    lumi affects signal, ZZ, and WZ. lnN = lognormal
+xs_Zp   lnN    1.010   -     -     -    -     W->Zp->3mu cross section + signal efficiency + other minor ones.
+xs_ZZ   lnN      -  1.0015   -     -    -     ZZ->4mu cross section uncertainty
+xs_WZ   lnN      -     -  1.0031   -    -     WZ->3mu cross section uncertainty
+xs_DY   lnN      -     -     -  1.0023  -     DY->3mu cross section uncertainty
+bg_RBE  lnN      -     -     -     -   1.30   30% uncertainty on the reducible background estimation

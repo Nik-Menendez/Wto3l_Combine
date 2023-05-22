@@ -1,0 +1,25 @@
+# Data card for W->Z'->3mu
+# One(?) signal process, three background processes when using RBE
+imax 1 number of channels
+jmax 3 number of backgrounds
+kmax 5 number of nuisance parameters (sources of systematic uncertaties)
+------------
+# we have just one channel, in which we observe NSO events
+bin bin1
+observation NSO
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second 'process' line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin             bin1  bin1  bin1  bin1
+process         Zp    ZZ    WZ    RBE
+process          0     1     2     3
+rate            nSE   nZE   nWE   nBE
+------------
+lumi    lnN    1.023 1.023 1.023   -    lumi affects signal, ZZ, and WZ. lnN = lognormal
+xs_Zp   lnN     xsS    -     -     -    W->Zp->3mu cross section + signal efficiency + other minor ones.
+xs_ZZ   lnN      -  1.0015   -     -    ZZ->4mu cross section uncertainty
+xs_WZ   lnN      -     -  1.0031   -    WZ->3mu cross section uncertainty
+bg_RBE  lnN      -     -     -   1.30   30% uncertainty on the reducible background estimation
+
